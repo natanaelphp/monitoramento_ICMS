@@ -1,0 +1,7 @@
+<?php $__env->startSection('content'); ?>
+
+	<?php echo $media; ?>
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('template.BlueTheme', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

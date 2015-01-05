@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Monitoramento Fiscal</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/pure.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/estilo.css">
+
+</head>
+<body>
+	
+	<div id='content'>
+		<?php $__env->startSection('content'); ?>
+			
+		<?php echo $__env->yieldSection(); ?>
+	</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?php $__env->startSection('content'); ?>
+	
+	<center>
+	
+		<a href="<?php echo URL::to('transacoes/nova'); ?>">
+			<div class='box'>
+				<img src='assets/img/write.png' class='box-img'><br>
+				Nova Transação
+			</div>
+		</a>
+
+		<a href="<?php echo URL::to('transacoes'); ?>">
+			<div class='box'>
+				<img src='assets/img/list.png' class='box-img'><br>
+				Listar Transações
+			</div>
+		</a>
+
+		<a href="<?php echo URL::to('relatorio'); ?>">
+			<div class='box'>
+				<img src='assets/img/report.png' class='box-img'><br>
+				Relatório
+			</div>
+		</a>
+		
+	</center>
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('template.BlueTheme', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

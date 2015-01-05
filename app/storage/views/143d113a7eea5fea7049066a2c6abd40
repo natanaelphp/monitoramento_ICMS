@@ -1,0 +1,37 @@
+<?php $__env->startSection('content'); ?>
+
+	<?php if( count($errors) > 0 ): ?>
+		<center>
+			<p><?php echo $errors->first(); ?></p>
+		</center>
+	<?php endif; ?>
+	
+	<form action="" method="post" class="form-transaction">
+
+		<?php echo Form::label('desc', 'Descrição:'); ?>
+
+		<?php echo Form::text('desc'); ?>
+
+
+		<?php echo Form::label('date', 'Data:'); ?>
+
+		<?php echo Form::text('date', date('d/m/Y'), array( 'class' => 'date')); ?>
+
+
+		<?php echo Form::label('value', 'Valor pago:'); ?>
+
+		<?php echo Form::text('value'); ?>
+
+
+		<?php echo Form::label('icms', 'ICMS:'); ?>
+
+		<?php echo Form::text('icms'); ?>
+
+
+		<?php echo Form::submit('Inserir'); ?>
+
+
+	</form>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('template.BlueTheme', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

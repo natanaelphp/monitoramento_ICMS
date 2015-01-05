@@ -1,0 +1,27 @@
+<?php $__env->startSection('content'); ?>
+
+	<a href="<?php echo URL::to('transacoes'); ?>">
+		<img src="<?php echo asset('assets/img/back.png'); ?>" title='Voltar'>
+	</a>
+
+	<center>
+		
+		<p>Esta ação não poderá ser desfeita. Tem certeza que deseja excluir a seguinte transação? </p>
+		</p><b><?php echo $transaction->desc; ?></b></p>
+
+		<?php echo Form::open( array('url' => 'transacoes/excluir/'.$transaction->id, 'class' => 'form-transaction') ); ?>
+
+			<?php echo Form::hidden('id', $transaction->id	); ?>
+
+			Digite DELETAR no campo abaixo para exlcuir a transação.
+			<?php echo Form::text('confirm'); ?>
+
+			<?php echo Form::submit('Excluir'); ?>
+
+		<?php echo Form::close(); ?>
+
+
+	</center>
+	
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('template.BlueTheme', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

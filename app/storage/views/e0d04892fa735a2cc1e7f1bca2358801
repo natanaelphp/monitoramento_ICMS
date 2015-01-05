@@ -1,0 +1,21 @@
+<?php $__env->startSection('content'); ?>
+	
+	@parent
+
+	<cesnter>
+
+		<table class="table space">
+			<tr>
+				<th>Média de ICMS no Período 1</th>
+				<th>Média de ICMS no Período 2</th>
+			</tr>
+			<tr>
+				<td><?php echo $media1; ?></td>
+				<td><?php echo $media2; ?></td>
+			</tr>
+		</table>
+
+	</center>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('report.form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

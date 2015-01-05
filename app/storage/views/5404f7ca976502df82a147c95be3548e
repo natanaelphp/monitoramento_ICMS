@@ -1,0 +1,49 @@
+<?php $__env->startSection('content'); ?>
+
+	<?php if( count($errors) > 0 ): ?>
+		<center>
+			<p><?php echo $errors->first(); ?></p>
+		</center>
+	<?php endif; ?>
+
+	<?php echo Form::open(); ?>
+
+
+		<div class="bloco">
+			<div class="bloco">
+				<?php echo Form::label('date1', 'Data Inicial 1:'); ?><br>
+				<?php echo Form::text('date_begin_1', Input::get('date_begin_1'), array('class' => 'date-input date')); ?>
+
+			</div>
+
+			<div class="bloco">			
+				<?php echo Form::label('date2','Data Final 1:'); ?><br>
+				<?php echo Form::text('date_end_1', Input::get('date_end_1'), array('class' => 'date-input date')); ?>
+
+			</div>
+		</div>
+
+		<div class="bloco">
+			<div class="bloco">
+				<?php echo Form::label('date2', 'Data Inicial 2:'); ?><br>
+				<?php echo Form::text('date_begin_2', Input::get('date_begin_2'), array('class' => 'date-input date')); ?>
+
+			</div>
+
+			<div class="bloco">			
+				<?php echo Form::label('date2','Data Final 2:'); ?><br>
+				<?php echo Form::text('date_end_2', Input::get('date_end_2'), array('class' => 'date-input date')); ?>
+
+			</div>
+		</div>
+		
+		<div class="bloco">
+			<?php echo Form::submit('Consultar', array('class' => 'report-submit')); ?>
+
+		</div>
+
+	<?php echo Form::close(); ?>
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('template.BlueTheme', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
